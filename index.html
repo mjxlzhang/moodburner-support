@@ -11,10 +11,10 @@
         .icon { font-size: 64px; margin-bottom: 12px; }
         h1 { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 4px; }
         .subtitle { font-size: 18px; color: #ff8c42; font-weight: 500; margin-bottom: 4px; }
-        .sub-subtitle { font-size: 14px; color: #888; font-weight: 400; margin-bottom: 16px; letter-spacing: 1px; }
+        .sub-subtitle { font-size: 14px; color: #888; font-weight: 400; margin-top: 4px; margin-bottom: 2px; letter-spacing: 1px; }
+        .sub-subtitle-light { font-size: 13px; color: #666; font-weight: 300; margin-top: 2px; margin-bottom: 14px; letter-spacing: 0.5px; }
         .desc { color: #b0b0b0; font-size: 15px; margin-bottom: 24px; line-height: 1.9; }
         .divider { height: 1px; background: #3a3a3a; margin: 24px 0; }
-        .badge { display: inline-block; background: #ff8c4222; color: #ff8c42; padding: 4px 16px; border-radius: 20px; font-size: 13px; margin: 0 4px 8px 4px; }
         .section { margin: 20px 0 16px 0; text-align: left; }
         .section-title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 10px; }
         .tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -22,11 +22,16 @@
         .scenes { display: flex; flex-direction: column; gap: 4px; }
         .scene-item { color: #b0b0b0; font-size: 14px; padding: 6px 0; border-bottom: 1px solid #2a2a2a; }
         .scene-item:last-child { border-bottom: none; }
+        .feedback { display: flex; flex-direction: column; gap: 6px; }
+        .feedback-item { color: #d0d0d0; font-size: 14px; padding: 8px 12px; background: #1f1f1f; border-radius: 8px; border-left: 3px solid #ff8c42; font-style: italic; }
+        .feedback-item::before { content: "\201C"; color: #ff8c42; font-weight: 600; }
+        .feedback-item::after { content: "\201D"; color: #ff8c42; font-weight: 600; }
+        .badge { display: inline-block; background: #ff8c4222; color: #ff8c42; padding: 4px 16px; border-radius: 20px; font-size: 13px; margin: 0 4px 8px 4px; }
         .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 16px; }
         .links a { color: #ff8c42; text-decoration: none; font-size: 14px; padding: 6px 16px; border: 1px solid #ff8c42; border-radius: 20px; transition: all 0.2s; }
         .links a:hover { background: #ff8c42; color: #1a1a1a; }
         .footer { color: #666; font-size: 13px; margin-top: 24px; padding-top: 16px; border-top: 1px solid #333; }
-        @media (max-width: 600px) { .container { padding: 28px 16px; } h1 { font-size: 22px; } }
+        @media (max-width: 600px) { .container { padding: 28px 16px; } h1 { font-size: 22px; } .subtitle { font-size: 16px; } .sub-subtitle { font-size: 12px; } .sub-subtitle-light { font-size: 11px; } }
     </style>
 </head>
 <body>
@@ -35,6 +40,7 @@
     <h1>坏心情焚烧炉</h1>
     <div class="subtitle">用仪式感告别坏心情</div>
     <div class="sub-subtitle">—— 写给那些「早就该扔掉却一直放不下」的东西 ——</div>
+    <div class="sub-subtitle-light">"有些人不值得怀念，只值得烧掉"</div>
     <div class="desc">写下你想告别的人或事，3-2-1 倒计时，火焰帮你翻篇。<br>每日 1 次，认真告别每一次。</div>
     <div>
         <span class="badge">📝 写下想告别的人或事</span>
@@ -43,17 +49,43 @@
         <span class="badge">🔒 所有数据仅存本地</span>
     </div>
     <div class="divider"></div>
-    <div class="section"><div class="section-title">🎯 适用人群</div><div class="tags"><span class="tag">刚分手 / 失恋的人</span><span class="tag">职场受委屈的打工人</span><span class="tag">被原生家庭困扰的人</span><span class="tag">精神内耗严重的人</span><span class="tag">想告别一段回忆的人</span><span class="tag">需要仪式感的人</span></div></div>
-    <div class="section"><div class="section-title">📌 使用场景</div><div class="scenes"><div class="scene-item">💔 刚结束一段关系，想真正放下</div><div class="scene-item">😤 被领导 PUA，憋了一肚子火</div><div class="scene-item">🌙 深夜失眠，脑子里反复想同一件事</div><div class="scene-item">🧠 精神内耗严重，想清理内心</div><div class="scene-item">🕰️ 一段回忆困扰多年，想翻篇</div><div class="scene-item">🔥 只是想体验一次「仪式感告别」</div></div></div>
-    <div class="divider"></div>
-    <div style="text-align:left; color:#b0b0b0; font-size:14px; margin:8px 0;">
-        <p style="margin-bottom:6px;">📱 <strong style="color:#fff;">适合这样的你：</strong></p>
-        <p style="color:#999; font-size:14px; padding-left:12px;">
-            • 刚刚结束一段关系，想真正放下<br>
-            • 在职场上受了委屈，需要一个出口<br>
-            • 被原生家庭困扰，想要自我疗愈<br>
-            • 精神内耗严重，想清理内心
-        </p>
+    <div class="section">
+        <div class="section-title">🎯 适用人群</div>
+        <div class="tags">
+            <span class="tag">刚分手 / 失恋的人</span>
+            <span class="tag">职场受委屈的打工人</span>
+            <span class="tag">被原生家庭困扰的人</span>
+            <span class="tag">精神内耗严重的人</span>
+            <span class="tag">被失眠/焦虑困扰的人</span>
+            <span class="tag">想告别一段回忆的人</span>
+            <span class="tag">需要仪式感的人</span>
+            <span class="tag">被催婚的人</span>
+            <span class="tag">失恋走不出来的人</span>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">📌 使用场景</div>
+        <div class="scenes">
+            <div class="scene-item">💔 刚结束一段关系，想真正放下</div>
+            <div class="scene-item">😤 被领导 PUA，憋了一肚子火</div>
+            <div class="scene-item">🌙 深夜失眠，脑子里反复想同一件事</div>
+            <div class="scene-item">🧠 精神内耗严重，想清理内心</div>
+            <div class="scene-item">🏠 被原生家庭困扰，想要自我疗愈</div>
+            <div class="scene-item">🕰️ 一段回忆困扰多年，想翻篇</div>
+            <div class="scene-item">🔥 只是想体验一次「仪式感告别」</div>
+            <div class="scene-item">💬 被催婚催到焦虑，想找回自己</div>
+            <div class="scene-item">😢 失恋了，需要一个告别仪式</div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">💬 他们说</div>
+        <div class="feedback">
+            <div class="feedback-item">烧掉前任的微信头像，终于睡了个好觉。</div>
+            <div class="feedback-item">把领导的PUA语录烧掉，感觉自己又活过来了。</div>
+            <div class="feedback-item">烧掉原生家庭的标签，30岁那年我为自己而活。</div>
+            <div class="feedback-item">十年暗恋，今天终于翻篇了。</div>
+            <div class="feedback-item">烧掉讨好型人格，第一次觉得呼吸都是轻松的。</div>
+        </div>
     </div>
     <div class="divider"></div>
     <div class="links">
@@ -62,7 +94,7 @@
         <a href="terms-of-service.html">用户协议</a>
         <a href="support.html">支持</a>
     </div>
-<div class="footer">© 2026 坏心情焚烧炉 · 翻过这一页，去往下一篇</div>
+    <div class="footer">© 2026 坏心情焚烧炉 · 翻过这一页，去往下一篇</div>
 </div>
 </body>
 </html>
