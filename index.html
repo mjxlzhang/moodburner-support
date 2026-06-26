@@ -13,13 +13,30 @@
         .subtitle { font-size: 18px; color: #ff8c42; font-weight: 500; margin-bottom: 4px; }
         .sub-subtitle { font-size: 14px; color: #888; font-weight: 400; margin-top: 4px; margin-bottom: 2px; letter-spacing: 1px; }
         .sub-subtitle-light { font-size: 13px; color: #666; font-weight: 300; margin-top: 2px; margin-bottom: 14px; letter-spacing: 0.5px; }
-        .tag-lavender { background: #a88ac822; color: #a88ac8; padding: 4px 14px; border-radius: 20px; font-size: 13px; border: 1px solid #a88ac822; }
         .desc { color: #b0b0b0; font-size: 15px; margin-bottom: 24px; line-height: 1.9; }
         .divider { height: 1px; background: #3a3a3a; margin: 24px 0; }
         .section { margin: 20px 0 16px 0; text-align: left; }
         .section-title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 10px; }
-        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-        .tags .tag { background: #ff8c4222; color: #ff8c42; padding: 4px 14px; border-radius: 20px; font-size: 13px; border: 1px solid #ff8c4222; }
+        /* 适用人群grid布局 */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 4px;
+        }
+        .audience-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: #1f1f1f;
+            border-radius: 10px;
+            border-left: 3px solid #ff8c42;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .audience-emoji { font-size: 18px; margin-right: 8px; }
+        .audience-text { color: #d0d0d0; font-size: 14px; font-weight: 500; }
         .scenes { display: flex; flex-direction: column; gap: 4px; }
         .scene-item { color: #b0b0b0; font-size: 14px; padding: 6px 0; border-bottom: 1px solid #2a2a2a; }
         .scene-item:last-child { border-bottom: none; }
@@ -32,7 +49,7 @@
         .links a { color: #ff8c42; text-decoration: none; font-size: 14px; padding: 6px 16px; border: 1px solid #ff8c42; border-radius: 20px; transition: all 0.2s; }
         .links a:hover { background: #ff8c42; color: #1a1a1a; }
         .footer { color: #666; font-size: 13px; margin-top: 24px; padding-top: 16px; border-top: 1px solid #333; }
-        @media (max-width: 600px) { .container { padding: 28px 16px; } h1 { font-size: 22px; } .subtitle { font-size: 16px; } .sub-subtitle { font-size: 12px; } .sub-subtitle-light { font-size: 11px; } }
+        @media (max-width: 600px) { .container { padding: 28px 16px; } h1 { font-size: 22px; } .subtitle { font-size: 16px; } .sub-subtitle { font-size: 12px; } .sub-subtitle-light { font-size: 11px; } .audience-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -42,7 +59,7 @@
     <div class="subtitle">用仪式感告别坏心情</div>
     <div class="sub-subtitle">—— 写给那些「早就该扔掉却一直放不下」的东西 ——</div>
     <div class="sub-subtitle-light">"有些人不值得怀念，只值得烧掉"</div>
-    <div class="desc">写下你想告别的人或事，3-2-1 倒计时，火焰帮你翻篇。<br>每日 1 次，认真告别每一次。<br>🟠 按钮橙 × 🟣 薰衣草紫，温暖与温柔共存。</div>
+    <div class="desc">写下你想告别的人或事，3-2-1 倒计时，火焰帮你翻篇。<br>每日 1 次，认真告别每一次。</div>
     <div>
         <span class="badge">📝 写下想告别的人或事</span>
         <span class="badge">🔥 5 个火焰视频随机播放</span>
@@ -67,16 +84,39 @@
     <div class="divider"></div>
     <div class="section">
         <div class="section-title">🎯 适用人群</div>
-        <div class="tags">
-            <span class="tag">刚分手 / 失恋的人</span>
-            <span class="tag">职场受委屈的打工人</span>
-            <span class="tag">被原生家庭困扰的人</span>
-            <span class="tag">精神内耗严重的人</span>
-            <span class="tag">被失眠/焦虑困扰的人</span>
-            <span class="tag">想告别一段回忆的人</span>
-            <span class="tag">需要仪式感的人</span>
-            <span class="tag">被催婚的人</span>
-            <span class="tag">失恋走不出来的人</span>
+        <div class="audience-grid">
+            <div class="audience-item">
+                <span class="audience-emoji">💔</span>
+                <span class="audience-text">刚分手/失恋的人</span>
+            </div>
+            <div class="audience-item">
+                <span class="audience-emoji">🏢</span>
+                <span class="audience-text">职场受委屈的打工人</span>
+            </div>
+            <div class="audience-item">
+                <span class="audience-emoji">🏠</span>
+                <span class="audience-text">被原生家庭困扰的人</span>
+            </div>
+            <div class="audience-item">
+                <span class="audience-emoji">🧠</span>
+                <span class="audience-text">精神内耗严重的人</span>
+            </div>
+            <div class="audience-item">
+                <span class="audience-emoji">🌙</span>
+                <span class="audience-text">被失眠/焦虑困扰的人</span>
+            </div>
+            <div class="audience-item">
+                <span class="audience-emoji">📖</span>
+                <span class="audience-text">想告别一段回忆的人</span>
+            </div>
+            <div class="audience-item">
+                <span class="audience-emoji">✨</span>
+                <span class="audience-text">需要仪式感的人</span>
+            </div>
+            <div class="audience-item">
+                <span class="audience-emoji">💍</span>
+                <span class="audience-text">被催婚/催育的人</span>
+            </div>
         </div>
     </div>
     <div class="section">
